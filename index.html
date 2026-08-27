@@ -318,7 +318,65 @@
             }
 
         }
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
 
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    width: 45%;
+    z-index: 2;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #8bc34a;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #5a9e35;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
     </style>
 
 </head>
@@ -366,6 +424,8 @@
 
 <section class="hero" id="home">
 
+    <img src="main.jpg" alt="Fresh Moong Sprouts" class="hero-bg">
+
     <div class="hero-content">
 
         <h1>
@@ -382,15 +442,6 @@
         <a href="#products" class="hero-button">
             Explore Our Products
         </a>
-
-    </div>
-
-
-    <div class="hero-image">
-
-        <img
-            src="main.jpg"
-            alt="Fresh Moong Sprouts">
 
     </div>
 

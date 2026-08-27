@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ankurit Plus - Healthy Sprouts</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f7fff5;
+            color: #263b2a;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .logo span {
+            color: #8bc34a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #2e7d32;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 550px;
+            padding: 70px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #eff9eb;
+        }
+
+        .hero-content {
+            width: 50%;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            color: #1b5e20;
+            line-height: 1.15;
+        }
+
+        .hero-content h1 span {
+            color: #7cb342;
+        }
+
+        .hero-content p {
+            margin-top: 20px;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #5d6d60;
+            max-width: 550px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .hero-button:hover {
+            background: #1b5e20;
+        }
+
+        .hero-image {
+            width: 45%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        /* SECTION */
+
+        .section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #1b5e20;
+        }
+
+        .section-title p {
+            margin-top: 10px;
+            color: #69766b;
+        }
+
+        /* PRODUCTS */
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-content h3 {
+            color: #2e7d32;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-content p {
+            color: #667269;
+            line-height: 1.6;
+        }
+
+        /* BENEFITS */
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .benefit {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 7px 20px rgba(0,0,0,0.07);
+        }
+
+        .benefit h3 {
+            color: #2e7d32;
+            margin-bottom: 12px;
+        }
+
+        .benefit p {
+            color: #68756a;
+            line-height: 1.6;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 50%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .about-content {
+            width: 50%;
+        }
+
+        .about-content h2 {
+            font-size: 38px;
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            line-height: 1.8;
+            color: #657066;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .contact h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin: 8px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #173c1b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-content {
+                width: 100%;
+            }
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about-image,
+            .about-content {
+                width: 100%;
+            }
+
+        }
+
+        @media(max-width: 500px) {
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        Ankurit <span>Plus</span>
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#products">Products</a>
+        </li>
+
+        <li>
+            <a href="#benefits">Benefits</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Fresh and Healthy
+            <span>Sprouts</span>
+        </h1>
+
+        <p>
+            Welcome to Ankurit Plus. Discover fresh,
+            nutritious and natural sprouts that can become
+            a delicious part of your everyday meals.
+        </p>
+
+        <a href="#products" class="hero-button">
+            Explore Our Products
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="images/moong-sprouts.jpg"
+            alt="Fresh Moong Sprouts">
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+
+    <div class="section-title">
+
+        <h2>Our Products</h2>
+
+        <p>
+            Fresh and nutritious choices from Ankurit Plus
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- MOONG -->
+
+        <div class="product-card">
+
+            <img
+                src="images/moong-sprouts.jpg"
+                alt="Moong Sprouts">
+
+            <div class="product-content">
+
+                <h3>Moong Sprouts</h3>
+
+                <p>
+                    Fresh moong sprouts are a versatile
+                    plant-based food that can be enjoyed
+                    in salads, breakfast bowls and snacks.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHANA -->
+
+        <div class="product-card">
+
+            <img
+                src="images/chana-sprouts.jpg"
+                alt="Chana Sprouts">
+
+            <div class="product-content">
+
+                <h3>Chana Sprouts</h3>
+
+                <p>
+                    Chana sprouts provide a wholesome
+                    addition to meals and can be used
+                    in salads, chaat and other recipes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ALMOND -->
+
+        <div class="product-card">
+
+            <img
+                src="images/almond-sprouts.jpg"
+                alt="Almonds">
+
+            <div class="product-content">
+
+                <h3>Almonds</h3>
+
+                <p>
+                    Almonds are a nutrient-rich food containing
+                    protein, fiber, healthy fats, vitamins
+                    and minerals.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="section" id="benefits">
+
+    <div class="section-title">
+
+        <h2>Benefits of Eating Sprouts</h2>
+
+        <p>
+            Add variety and nutrition to your everyday meals.
+        </p>
+
+    </div>
+
+
+    <div class="benefits">
+
+
+        <div class="benefit">
+
+            <h3>Protein</h3>
+
+            <p>
+                Sprouts can provide plant-based protein
+                as part of a balanced diet.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <h3>Fiber</h3>
+
+            <p>
+                Sprouts can contribute dietary fiber
+                to your daily meals.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <h3>Nutrients</h3>
+
+            <p>
+                Sprouts contain various vitamins,
+                minerals and other nutrients.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <h3>Fresh Food</h3>
+
+            <p>
+                Sprouts are an easy way to add
+                more plant-based foods to your diet.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+    <div class="about">
+
+
+        <div class="about-image">
+
+            <img
+                src="images/chana-sprouts.jpg"
+                alt="Fresh Sprouts">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <h2>About Ankurit Plus</h2>
+
+            <p>
+                Ankurit Plus is focused on bringing fresh
+                and nutritious sprouted foods to your table.
+
+                Our aim is to make healthy food simple,
+                delicious and convenient for everyday life.
+
+                From moong sprouts to chana and other
+                nutritious foods, we provide wholesome
+                choices for your daily meals.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Contact Ankurit Plus</h2>
+
+    <p>Phone: +91 XXXXX XXXXX</p>
+
+    <p>Email: info@ankuritplus.com</p>
+
+    <p>Address: India</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        Copyright 2026 Ankurit Plus. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

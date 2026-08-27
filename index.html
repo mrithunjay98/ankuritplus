@@ -92,15 +92,24 @@
         }
 
         .hero-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 28px;
-            background: #2e7d32;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-        }
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    animation: colorChange 1.5s infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        background: #1976d2;
+    }
+    to {
+        background: #2e7d32;
+    }
+}
 
         .hero-button:hover {
             background: #1b5e20;

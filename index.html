@@ -429,21 +429,28 @@
 }
      .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     max-width: 1000px;
     margin: 30px auto;
     padding: 0 20px;
 }
-        .review-card { background: white; padding: 25px; border-radius: 12px;
-                      text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-                      transition: transform 0.3s ease; } .review-card:hover { transform: translateY(-5px); } 
+        .review-card {
+            background: white; 
+            padding: 25px; border-radius: 12px;
+           text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+         transition: transform 0.3s ease; 
+        }
+        .review-card:hover {
+            transform: translateY(-5px); 
+        } 
         .review-card h3 {
             margin: 10px 0; 
            color: #2e7d32; } 
         .review-card p { 
             color: #555;
-                        line-height: 1.6;
+         line-height: 1.6;
                                                                            } 
         .stars { color: #f5b301;
                 font-size: 24px; 
